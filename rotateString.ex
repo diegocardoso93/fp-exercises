@@ -11,7 +11,9 @@ defmodule Solution do
 
     list
     |> Enum.with_index()
-    |> Enum.map(fn {_, i} -> "#{Enum.slice(list, (i + 1)..Enum.count(list))}" <> "#{Enum.slice(list, 0..i)}" end)
+    |> Enum.map(fn {_, i} ->
+      "#{Enum.slice(list, (i + 1)..Enum.count(list))}" <> "#{Enum.slice(list, 0..i)}"
+    end)
     |> Enum.join(" ")
   end
 end
