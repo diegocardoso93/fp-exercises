@@ -19,4 +19,4 @@ defmodule Solution do
 end
 
 Solution.rotate_strings(s_tail)
-|> Enum.each(fn x -> IO.puts(x) end)
+|> Enum.each(&IO.puts/1)
